@@ -2,14 +2,13 @@ import multer from "multer";
 const pathname = new URL("../", import.meta.url);
 
 const path =
-  pathname.pathname.slice(1, pathname.pathname.length) + "public/img";
+  pathname.pathname.slice(1, pathname.pathname.length) + "public/uploads";
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, path);
   },
   filename: function (req, file, cb) {
-    // console.log(file);
     cb(null, file.originalname);
   },
 });

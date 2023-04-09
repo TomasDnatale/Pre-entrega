@@ -7,7 +7,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
-app.use("/static", express.static("./public"));
+app.use("/static", express.static("./src/public"));
 app.use("/api/carts", routerCar);
 app.use("/api/products", productRouter);
 app.listen(8080, () => {

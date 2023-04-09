@@ -22,7 +22,6 @@ class ProductManager {
     stock
   ) => {
     const productsFS = await this.getProducts();
-    // console.log(productsFS);
     this.products = productsFS;
 
     const product = {
